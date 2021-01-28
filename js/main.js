@@ -11,7 +11,6 @@
 
     let i = 0; //start point
     let images = []; //empty array
-    let time = 3000;
     let img = document.getElementById('img');
     let forwardButton = document.getElementById('forward');
     let backButton = document.getElementById('back');
@@ -19,10 +18,10 @@
 
     //array of images
     images[0] = "img/brilliant.jpg";
-    images[1] = "img/alone.jpg";
+    images[1] = "img/colorful.jpg";
     images[2] = "img/laptop.jpg";
 
-    img.src = images[i];
+    img.src = images[i]; //without this the img tag that is currently empty in the html will show (an empty box cause there's no image in it), but here I am declaring that at the get go, the image will be the first index image.
 
     //function to change image forward
 
