@@ -17,18 +17,24 @@
 
 
     //array of images
-    images[0] = "img/brilliant.jpg";
-    images[1] = "img/colorful.jpg";
-    images[2] = "img/laptop.jpg";
+    images[0] = "img/one.jpg";
+    images[1] = "img/two.jpg";
+    images[2] = "img/three.jpg";
 
     img.src = images[i]; //without this the img tag that is currently empty in the html will show (an empty box cause there's no image in it), but here I am declaring that at the get go, the image will be the first index image.
 
     //function to change image forward
-
-    function changeImg(){
+    function nextImg(){
         img.src = images[i];
+        
+        // if(i < images.length - 1){
+        //     i++;
+        // } else {
+        //     i = 0;
+        // }
 
-        if(i < images.length - 1){
+
+        if(i < images.length - 1){//ie. if i = 0 or 1 keep adding
             i++;
         } else {
             i = 0;
@@ -36,8 +42,8 @@
     }
 
     //function to change image backwards
-
     function previousImg(){
+
         img.src = images[i];
 
         if(i < images.length && i > 0){
@@ -49,7 +55,7 @@
     
     //click button function
 
-    forwardButton.addEventListener('click', changeImg);
+    forwardButton.addEventListener('click', nextImg);
     backButton.addEventListener('click', previousImg);
 
 
